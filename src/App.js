@@ -1,22 +1,25 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+    const [order, setOrder] = useState('avocado');
+    const [price, setPrice] = useState(0);
+
+  useEffect(() => {
+      fetch('/hi', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({'order': order})
+      }).then(res => res.json())
+          .then(data => setPrice(data.price));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <h1>If only you knew how bad things really are...</h1>
+
+          <p> The price of {order} is ${price}</p>
       </header>
     </div>
   );
