@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <h1>If only you knew how bad things really are...</h1>
+          <h1>Welcome to the grocery store.</h1>
 
           <p> The price of {order} is ${price}</p>
       </header>
