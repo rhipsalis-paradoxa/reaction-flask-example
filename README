@@ -1,6 +1,6 @@
 This is an example of how a frontend written in JavaScript can talk to
-a backend written in Python.  The frontend using React, and the
-backend uses Flask.
+a backend written in Python.  The frontend uses React, and the backend
+uses Flask.
 
 This is a slightly more fleshed out version of the following blog
 post, so basically all credit is due to the author of that:
